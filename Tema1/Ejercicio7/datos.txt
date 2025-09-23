@@ -1,0 +1,17 @@
+4
+6
+b d c a h f
+6
+d k b e g a
+4
+a b c d
+3
+c d e
+2
+d f
+4
+a b d e
+2
+a b
+2
+c d
