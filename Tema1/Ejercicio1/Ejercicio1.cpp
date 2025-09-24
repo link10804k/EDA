@@ -26,7 +26,7 @@ bool resolver(int nDatos) {
             ++i;
         }
     }
-    else { // Descendente
+    else if (datos[1] < datos[0]) { // Descendente
         int i = 2;
         while (i < nDatos && dalton) {
             if (datos[i] >= datos[i - 1]) {
@@ -34,6 +34,9 @@ bool resolver(int nDatos) {
             }
             ++i;
         }
+    }
+    else {
+        dalton = false;
     }
     return dalton;
 }
@@ -61,7 +64,7 @@ bool resuelveCaso() {
 
     return true;
 }
-
+//#define DOMJUDGE
 int main() {
     // Para la entrada por fichero.
     // Comentar para acepta el reto
