@@ -4,13 +4,39 @@
 #include <iostream>
 #include <iomanip>
 #include <fstream>
-
+#include <vector>
 
 // función que resuelve el problema
 bool resolver(int nDatos) {
-        
-}
+    std::vector<int> datos;
+    bool dalton = true;
+    int aux;
 
+    for (int i = 0; i < nDatos; ++i) {
+        std::cin >> aux;
+        datos.push_back(aux);
+    }
+
+    if (datos[1] > datos[0]) { // Ascendente
+        int i = 2;
+        while (i < nDatos && dalton) {
+            if (datos[i] <= datos[i - 1]) {
+                dalton = false;
+            }
+            ++i;
+        }
+    }
+    else { // Descendente
+        int i = 2;
+        while (i < nDatos && dalton) {
+            if (datos[i] >= datos[i - 1]) {
+                dalton = false;
+            }
+            ++i;
+        }
+    }
+    return dalton;
+}
 // Resuelve un caso de prueba, leyendo de la entrada la
 // configuración, y escribiendo la respuesta
 bool resuelveCaso() {
@@ -26,8 +52,14 @@ bool resuelveCaso() {
 
     // escribir sol
 
-    return true;
+    if (sol) {
+        std::cout << "DALTON" << std::endl;
+    }
+    else {
+        std::cout << "DESCONOCIDOS" << std::endl;
+    }
 
+    return true;
 }
 
 int main() {
