@@ -1,17 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\jzazo\\Documents\\GitHub\\2\u00BA\\EDA\\Tema1\\",
+  "WorkspaceRootPath": "C:\\Users\\jzazo\\OneDrive\\Documents\\GitHub\\EDA\\Tema1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3EB35405-78A9-4301-A2A1-A44483E54D08}|Ejercicio1\\Ejercicio1.vcxproj|C:\\Users\\jzazo\\Documents\\GitHub\\2\u00BA\\EDA\\Tema1\\Ejercicio1\\Ejercicio1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{3EE939F3-47EE-42FF-A1D9-2B894529D4C2}|Ejercicio2\\Ejercicio2.vcxproj|C:\\Users\\jzazo\\OneDrive\\Documents\\GitHub\\EDA\\Tema1\\Ejercicio2\\Ejercicio2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3EE939F3-47EE-42FF-A1D9-2B894529D4C2}|Ejercicio2\\Ejercicio2.vcxproj|solutionrelative:Ejercicio2\\Ejercicio2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EB35405-78A9-4301-A2A1-A44483E54D08}|Ejercicio1\\Ejercicio1.vcxproj|C:\\Users\\jzazo\\OneDrive\\Documents\\GitHub\\EDA\\Tema1\\Ejercicio1\\Ejercicio1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{3EB35405-78A9-4301-A2A1-A44483E54D08}|Ejercicio1\\Ejercicio1.vcxproj|solutionrelative:Ejercicio1\\Ejercicio1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{800B2617-A542-475E-8EF7-59054E6D1A01}|Ejercicio7\\Ejercicio7.vcxproj|C:\\Users\\jzazo\\Documents\\GitHub\\2\u00BA\\EDA\\Tema1\\Ejercicio7\\Ejercicio7.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{800B2617-A542-475E-8EF7-59054E6D1A01}|Ejercicio7\\Ejercicio7.vcxproj|C:\\Users\\jzazo\\OneDrive\\Documents\\GitHub\\EDA\\Tema1\\Ejercicio7\\Ejercicio7.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{800B2617-A542-475E-8EF7-59054E6D1A01}|Ejercicio7\\Ejercicio7.vcxproj|solutionrelative:Ejercicio7\\Ejercicio7.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E29970EF-6663-4B95-ADE6-1DC049F8465F}|Ejercicio6\\Ejercicio6.vcxproj|C:\\Users\\jzazo\\Documents\\GitHub\\2\u00BA\\EDA\\Tema1\\Ejercicio6\\Ejercicio6.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{E29970EF-6663-4B95-ADE6-1DC049F8465F}|Ejercicio6\\Ejercicio6.vcxproj|C:\\Users\\jzazo\\OneDrive\\Documents\\GitHub\\EDA\\Tema1\\Ejercicio6\\Ejercicio6.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{E29970EF-6663-4B95-ADE6-1DC049F8465F}|Ejercicio6\\Ejercicio6.vcxproj|solutionrelative:Ejercicio6\\Ejercicio6.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -27,23 +31,36 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Ejercicio2.cpp",
+              "DocumentMoniker": "C:\\Users\\jzazo\\OneDrive\\Documents\\GitHub\\EDA\\Tema1\\Ejercicio2\\Ejercicio2.cpp",
+              "RelativeDocumentMoniker": "Ejercicio2\\Ejercicio2.cpp",
+              "ToolTip": "C:\\Users\\jzazo\\OneDrive\\Documents\\GitHub\\EDA\\Tema1\\Ejercicio2\\Ejercicio2.cpp",
+              "RelativeToolTip": "Ejercicio2\\Ejercicio2.cpp",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAqwA8AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-25T18:21:41.473Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Ejercicio1.cpp",
-              "DocumentMoniker": "C:\\Users\\jzazo\\Documents\\GitHub\\2\u00BA\\EDA\\Tema1\\Ejercicio1\\Ejercicio1.cpp",
+              "DocumentMoniker": "C:\\Users\\jzazo\\OneDrive\\Documents\\GitHub\\EDA\\Tema1\\Ejercicio1\\Ejercicio1.cpp",
               "RelativeDocumentMoniker": "Ejercicio1\\Ejercicio1.cpp",
-              "ToolTip": "C:\\Users\\jzazo\\Documents\\GitHub\\2\u00BA\\EDA\\Tema1\\Ejercicio1\\Ejercicio1.cpp",
+              "ToolTip": "C:\\Users\\jzazo\\OneDrive\\Documents\\GitHub\\EDA\\Tema1\\Ejercicio1\\Ejercicio1.cpp",
               "RelativeToolTip": "Ejercicio1\\Ejercicio1.cpp",
-              "ViewState": "AgIAAC8AAAAAAAAAAADwvz8AAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAADwvyMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-09-23T13:52:48.347Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Ejercicio7.cpp",
-              "DocumentMoniker": "C:\\Users\\jzazo\\Documents\\GitHub\\2\u00BA\\EDA\\Tema1\\Ejercicio7\\Ejercicio7.cpp",
+              "DocumentMoniker": "C:\\Users\\jzazo\\OneDrive\\Documents\\GitHub\\EDA\\Tema1\\Ejercicio7\\Ejercicio7.cpp",
               "RelativeDocumentMoniker": "Ejercicio7\\Ejercicio7.cpp",
-              "ToolTip": "C:\\Users\\jzazo\\Documents\\GitHub\\2\u00BA\\EDA\\Tema1\\Ejercicio7\\Ejercicio7.cpp",
+              "ToolTip": "C:\\Users\\jzazo\\OneDrive\\Documents\\GitHub\\EDA\\Tema1\\Ejercicio7\\Ejercicio7.cpp",
               "RelativeToolTip": "Ejercicio7\\Ejercicio7.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
@@ -51,11 +68,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Ejercicio6.cpp",
-              "DocumentMoniker": "C:\\Users\\jzazo\\Documents\\GitHub\\2\u00BA\\EDA\\Tema1\\Ejercicio6\\Ejercicio6.cpp",
+              "DocumentMoniker": "C:\\Users\\jzazo\\OneDrive\\Documents\\GitHub\\EDA\\Tema1\\Ejercicio6\\Ejercicio6.cpp",
               "RelativeDocumentMoniker": "Ejercicio6\\Ejercicio6.cpp",
-              "ToolTip": "C:\\Users\\jzazo\\Documents\\GitHub\\2\u00BA\\EDA\\Tema1\\Ejercicio6\\Ejercicio6.cpp",
+              "ToolTip": "C:\\Users\\jzazo\\OneDrive\\Documents\\GitHub\\EDA\\Tema1\\Ejercicio6\\Ejercicio6.cpp",
               "RelativeToolTip": "Ejercicio6\\Ejercicio6.cpp",
               "ViewState": "AgIAAEQAAAAAAAAAAAAAAFQAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
