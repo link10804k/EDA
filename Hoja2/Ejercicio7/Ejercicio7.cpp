@@ -4,9 +4,25 @@
 #include <vector>
 using namespace std;
 
-// función que resuelve el problema
+// Complejidad: O(log(fin-ini)) porque solo se llama una vez a la función recursiva cada iteración, se le divide a la mitad el espacio de trabajo 
+// y el resto de operaciones son de complejidad constante (O(1))
 int minimo(const vector<int>& sec, int ini, int fin) {
-    ...
+    if (fin - ini == 1) {
+        return sec[ini];
+    }
+    else {
+        int mit = (ini + fin) / 2;
+
+        if (mit > 0 && sec[mit - 1] < sec[mit]) {
+            return minimo(sec, ini, mit);
+        }
+        else if (mit < sec.size() - 1 && sec[mit + 1] < sec[mit]) {
+            return minimo(sec, mit, fin);
+        }
+        else {
+            return sec[mit];
+        }
+    }
 }
 
 // Resuelve un caso de prueba, leyendo de la entrada la

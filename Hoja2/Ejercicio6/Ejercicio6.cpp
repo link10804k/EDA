@@ -1,3 +1,5 @@
+// Javier Zazo Morillo
+// GDV-EDA72
 
 #include <iostream>
 #include <iomanip>
@@ -5,9 +7,27 @@
 #include <vector>
 using namespace std;
 
-// función que resuelve el problema
-bool resolver(const vector<int>& v, int ini, int fin) {
-    ...
+// Complejidad: O(log(fin-ini)) porque solo se llama una vez a la función recursiva cada iteración, se le divide a la mitad el espacio de trabajo 
+// y el resto de operaciones son de complejidad constante (O(1))
+bool elemento_situado(const vector<int>& v, int ini, int fin) {
+    if (v.size() == 0) {
+        return false;
+    }
+    else if (fin - ini == 1) {
+        return v[ini] == ini;
+    }
+    else {
+        int mit = (ini + fin) / 2;
+        if (v[mit] == mit) {
+            return true;
+        }
+        else if (v[mit] > mit) {
+            return elemento_situado(v, ini, mit);
+        }
+        else {
+            return elemento_situado(v, mit, fin);
+        }
+    }
 }
 
 // Resuelve un caso de prueba, leyendo de la entrada la
@@ -18,7 +38,7 @@ void resuelveCaso() {
     cin >> n;
     vector<int> sec(n);
     for (int& e : sec) cin >> e;
-    cout << (resolver(sec, 0, n) ? "SI" : "NO") << endl;
+    cout << (elemento_situado(sec, 0, n) ? "SI" : "NO") << endl;
 }
 
 int main() {

@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\jzazo\\Documents\\GitHub\\2\u00BA\\EDA\\Hoja2\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E7902DED-7F5E-44CB-BD59-E077ED619B53}|Ejercicio7\\Ejercicio7.vcxproj|C:\\Users\\jzazo\\Documents\\GitHub\\2\u00BA\\EDA\\Hoja2\\Ejercicio7\\Ejercicio7.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E7902DED-7F5E-44CB-BD59-E077ED619B53}|Ejercicio7\\Ejercicio7.vcxproj|solutionrelative:Ejercicio7\\Ejercicio7.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83C98DB9-77C7-4B49-889F-F517AB97F02D}|Ejercicio6\\Ejercicio6.vcxproj|C:\\Users\\jzazo\\Documents\\GitHub\\2\u00BA\\EDA\\Hoja2\\Ejercicio6\\Ejercicio6.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{83C98DB9-77C7-4B49-889F-F517AB97F02D}|Ejercicio6\\Ejercicio6.vcxproj|solutionrelative:Ejercicio6\\Ejercicio6.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F26A32B6-79C0-448C-88D9-F18A6A0CC0EE}|Ejercicio5\\Ejercicio5.vcxproj|C:\\Users\\jzazo\\Documents\\GitHub\\2\u00BA\\EDA\\Hoja2\\Ejercicio5\\Ejercicio5.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F26A32B6-79C0-448C-88D9-F18A6A0CC0EE}|Ejercicio5\\Ejercicio5.vcxproj|solutionrelative:Ejercicio5\\Ejercicio5.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D9BC4CAE-D1F6-4809-B7E2-51938F21594A}|Ejercicio4\\Ejercicio4.vcxproj|C:\\Users\\jzazo\\Documents\\GitHub\\2\u00BA\\EDA\\Hoja2\\Ejercicio4\\Ejercicio4.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D9BC4CAE-D1F6-4809-B7E2-51938F21594A}|Ejercicio4\\Ejercicio4.vcxproj|solutionrelative:Ejercicio4\\Ejercicio4.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -21,18 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{B94E0DEC-CF41-4510-9262-03DDC6B72AD4}|Ejercicio8\\Ejercicio8.vcxproj|C:\\Users\\jzazo\\Documents\\GitHub\\2\u00BA\\EDA\\Hoja2\\Ejercicio8\\Ejercicio8.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B94E0DEC-CF41-4510-9262-03DDC6B72AD4}|Ejercicio8\\Ejercicio8.vcxproj|solutionrelative:Ejercicio8\\Ejercicio8.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7902DED-7F5E-44CB-BD59-E077ED619B53}|Ejercicio7\\Ejercicio7.vcxproj|C:\\Users\\jzazo\\Documents\\GitHub\\2\u00BA\\EDA\\Hoja2\\Ejercicio7\\Ejercicio7.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{E7902DED-7F5E-44CB-BD59-E077ED619B53}|Ejercicio7\\Ejercicio7.vcxproj|solutionrelative:Ejercicio7\\Ejercicio7.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{83C98DB9-77C7-4B49-889F-F517AB97F02D}|Ejercicio6\\Ejercicio6.vcxproj|C:\\Users\\jzazo\\Documents\\GitHub\\2\u00BA\\EDA\\Hoja2\\Ejercicio6\\Ejercicio6.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{83C98DB9-77C7-4B49-889F-F517AB97F02D}|Ejercicio6\\Ejercicio6.vcxproj|solutionrelative:Ejercicio6\\Ejercicio6.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F26A32B6-79C0-448C-88D9-F18A6A0CC0EE}|Ejercicio5\\Ejercicio5.vcxproj|C:\\Users\\jzazo\\Documents\\GitHub\\2\u00BA\\EDA\\Hoja2\\Ejercicio5\\Ejercicio5.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F26A32B6-79C0-448C-88D9-F18A6A0CC0EE}|Ejercicio5\\Ejercicio5.vcxproj|solutionrelative:Ejercicio5\\Ejercicio5.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C51E0442-7E5A-4556-AAE0-5B63CB88975F}|Ejercicio15\\Ejercicio15.vcxproj|C:\\Users\\jzazo\\Documents\\GitHub\\2\u00BA\\EDA\\Hoja2\\Ejercicio15\\Ejercicio15.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -65,7 +65,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
@@ -129,7 +129,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Ejercicio10.cpp",
               "DocumentMoniker": "C:\\Users\\jzazo\\Documents\\GitHub\\2\u00BA\\EDA\\Hoja2\\Ejercicio10\\Ejercicio10.cpp",
               "RelativeDocumentMoniker": "Ejercicio10\\Ejercicio10.cpp",
@@ -153,7 +153,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "Ejercicio8.cpp",
               "DocumentMoniker": "C:\\Users\\jzazo\\Documents\\GitHub\\2\u00BA\\EDA\\Hoja2\\Ejercicio8\\Ejercicio8.cpp",
               "RelativeDocumentMoniker": "Ejercicio8\\Ejercicio8.cpp",
@@ -165,56 +165,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "Ejercicio7.cpp",
               "DocumentMoniker": "C:\\Users\\jzazo\\Documents\\GitHub\\2\u00BA\\EDA\\Hoja2\\Ejercicio7\\Ejercicio7.cpp",
               "RelativeDocumentMoniker": "Ejercicio7\\Ejercicio7.cpp",
               "ToolTip": "C:\\Users\\jzazo\\Documents\\GitHub\\2\u00BA\\EDA\\Hoja2\\Ejercicio7\\Ejercicio7.cpp",
               "RelativeToolTip": "Ejercicio7\\Ejercicio7.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-30T13:30:43.908Z"
+              "WhenOpened": "2025-09-30T13:30:43.908Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "Ejercicio6.cpp",
               "DocumentMoniker": "C:\\Users\\jzazo\\Documents\\GitHub\\2\u00BA\\EDA\\Hoja2\\Ejercicio6\\Ejercicio6.cpp",
               "RelativeDocumentMoniker": "Ejercicio6\\Ejercicio6.cpp",
               "ToolTip": "C:\\Users\\jzazo\\Documents\\GitHub\\2\u00BA\\EDA\\Hoja2\\Ejercicio6\\Ejercicio6.cpp",
               "RelativeToolTip": "Ejercicio6\\Ejercicio6.cpp",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwCAAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-30T13:30:33.03Z"
+              "WhenOpened": "2025-09-30T13:30:33.03Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "Ejercicio5.cpp",
               "DocumentMoniker": "C:\\Users\\jzazo\\Documents\\GitHub\\2\u00BA\\EDA\\Hoja2\\Ejercicio5\\Ejercicio5.cpp",
               "RelativeDocumentMoniker": "Ejercicio5\\Ejercicio5.cpp",
               "ToolTip": "C:\\Users\\jzazo\\Documents\\GitHub\\2\u00BA\\EDA\\Hoja2\\Ejercicio5\\Ejercicio5.cpp",
               "RelativeToolTip": "Ejercicio5\\Ejercicio5.cpp",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABYAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-30T13:30:19.589Z"
+              "WhenOpened": "2025-09-30T13:30:19.589Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Ejercicio4.cpp",
               "DocumentMoniker": "C:\\Users\\jzazo\\Documents\\GitHub\\2\u00BA\\EDA\\Hoja2\\Ejercicio4\\Ejercicio4.cpp",
               "RelativeDocumentMoniker": "Ejercicio4\\Ejercicio4.cpp",
               "ToolTip": "C:\\Users\\jzazo\\Documents\\GitHub\\2\u00BA\\EDA\\Hoja2\\Ejercicio4\\Ejercicio4.cpp",
               "RelativeToolTip": "Ejercicio4\\Ejercicio4.cpp",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-09-30T13:30:09.408Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Ejercicio3.cpp",
               "DocumentMoniker": "C:\\Users\\jzazo\\Documents\\GitHub\\2\u00BA\\EDA\\Hoja2\\Ejercicio3\\Ejercicio3.cpp",
               "RelativeDocumentMoniker": "Ejercicio3\\Ejercicio3.cpp",
@@ -226,7 +229,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Ejercicio2.cpp",
               "DocumentMoniker": "C:\\Users\\jzazo\\Documents\\GitHub\\2\u00BA\\EDA\\Hoja2\\Ejercicio2\\Ejercicio2.cpp",
               "RelativeDocumentMoniker": "Ejercicio2\\Ejercicio2.cpp",
