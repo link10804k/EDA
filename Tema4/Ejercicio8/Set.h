@@ -128,32 +128,100 @@ public:
     template <class E>
     friend ostream& operator<<(ostream& out, const Set<E>& s);
 
+    // Complejidad: O(n.size() + m.size()) porque se hacen dos recorridos a la vez de los sets y en el peor caso solo se avanza un ínice cada iteración (en el mejor sería O(n.size()) siendo n.size() == m.size())
     Set<T> operator||(const Set<T>& other) const { // Unión de conjuntos
-        Set<T> res;
-        res.copia(*this);
-        for (int i = 0; i < other.size(); ++i) {
-            if (!res.contains(other.array[i])) {
-                res.add(other.array[i]);
+        Set<T> res(size() + other.size());
+        int i = 0;
+        int j = 0;
+        int k = 0;
+
+        while (j < size() && k < other.size()) {
+            if (array[j] == other.array[k]) {
+                res.array[i] = array[j];
+                ++j;
+                ++k;
+            }
+            else if (array[j] < other.array[k]) {
+                res.array[i] = array[j];
+                ++j;
+            }
+            else {
+                res.array[i] = other.array[k];
+                ++k;
+            }
+            ++i;
+            ++res.nelems;
+        }
+        if (j < size()) {
+            for (int l = j; l < size(); ++l) {
+                res.array[i] = array[l];
+                ++i;
+                ++res.nelems;
             }
         }
+        else if (k < other.size()) {
+            for (int l = k; l < other.size(); ++l) {
+                res.array[i] = other.array[l];
+                ++i;
+                ++res.nelems;
+            }
+        }
+
         return res;
     }
 
+    // Complejidad: O(n.size() + m.size()) porque se hacen dos recorridos a la vez de los sets y en el peor caso solo se avanza un ínice cada iteración (en el mejor sería O(n.size()) siendo n.size() == m.size())
     Set<T> operator&&(const Set<T>& other) const { // Intersección de conjuntos
-        Set<T> res;
-        for (int i = 0; i < size(); ++i) {
-            if (other.contains(array[i])) {
-                res.add(array[i]);
+        Set<T> res(size() + other.size());
+        int i = 0;
+        int j = 0;
+        int k = 0;
+
+        while (j < size() && k < other.size()) {
+            if (array[j] == other.array[k]) {
+                res.array[i] = array[j];
+                ++i;
+                ++res.nelems;
+                ++j;
+                ++k;
+            }
+            else if (array[j] < other.array[k]) {
+                ++j;
+            }
+            else {
+                ++k;
             }
         }
         return res;
     }
 
-    Set<T> operator-(const Set<T>& other) const { // Intersección de conjuntos
-        Set<T> res;
-        for (int i = 0; i < size(); ++i) {
-            if (!other.contains(array[i])) {
-                res.add(array[i]);
+    // Complejidad: O(n.size() + m.size()) porque se hacen dos recorridos a la vez de los sets y en el peor caso solo se avanza un ínice cada iteración (en el mejor sería O(n.size()) siendo n.size() == m.size())
+    Set<T> operator-(const Set<T>& other) const { // Intersección de conjuntos 
+        Set<T> res(size() + other.size());
+        int i = 0;
+        int j = 0;
+        int k = 0;
+
+        while (j < size() && k < other.size()) {
+            if (array[j] == other.array[k]) {
+                ++j;
+                ++k;
+            }
+            else if (array[j] < other.array[k]) {
+                res.array[i] = array[j];
+                ++j;
+                ++i;
+                ++res.nelems;
+            }
+            else {
+                ++k;
+            }
+        }
+        if (j < size()) {
+            for (int l = j; l < size(); ++l) {
+                res.array[i] = array[l];
+                ++i;
+                ++res.nelems;
             }
         }
         return res;

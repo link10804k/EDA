@@ -1,38 +1,20 @@
 ﻿  Ejercicio5.cpp
-C:\Users\jzazo\Documents\GitHub\2n\EDA\Tema4\Ejercicio5\Set.h(69,22): warning C4244: '=': conversión de '__int64' a 'int'; posible pérdida de datos
+C:\Users\jzazo\OneDrive\Documents\GitHub\2º\EDA\Tema4\Ejercicio5\Set.h(69,22): warning C4244: '=': conversión de '__int64' a 'int'; posible pérdida de datos
   (compilando archivo de origen "Ejercicio5.cpp")
-      C:\Users\jzazo\Documents\GitHub\2n\EDA\Tema4\Ejercicio5\Set.h(69,22):
+      C:\Users\jzazo\OneDrive\Documents\GitHub\2º\EDA\Tema4\Ejercicio5\Set.h(69,22):
       el contexto de creación de instancias de la plantilla (el más antiguo primero) es
-          C:\Users\jzazo\Documents\GitHub\2n\EDA\Tema4\Ejercicio5\Ejercicio5.cpp(16,14):
+          C:\Users\jzazo\OneDrive\Documents\GitHub\2º\EDA\Tema4\Ejercicio5\Ejercicio5.cpp(16,14):
           Vea la referencia a la creación de una instancia de clase plantilla "Set<int>" que se está compilando
-          C:\Users\jzazo\Documents\GitHub\2n\EDA\Tema4\Ejercicio5\Set.h(53,10):
+          C:\Users\jzazo\OneDrive\Documents\GitHub\2º\EDA\Tema4\Ejercicio5\Set.h(53,10):
           al compilar la función del miembro clase plantilla "void Set<int>::add(const T &)"
           with
           [
               T=int
           ]
-              C:\Users\jzazo\Documents\GitHub\2n\EDA\Tema4\Ejercicio5\Ejercicio5.cpp(22,27):
+              C:\Users\jzazo\OneDrive\Documents\GitHub\2º\EDA\Tema4\Ejercicio5\Ejercicio5.cpp(22,27):
               vea la primera referencia a “Set<int>::add” en “resuelveCaso”
   
-C:\Users\jzazo\Documents\GitHub\2n\EDA\Tema4\Ejercicio5\Set.h(54,14): warning C4101: 'found': variable local sin referencia
+C:\Users\jzazo\OneDrive\Documents\GitHub\2º\EDA\Tema4\Ejercicio5\Set.h(54,14): warning C4101: 'found': variable local sin referencia
   (compilando archivo de origen "Ejercicio5.cpp")
   
-C:\Users\jzazo\Documents\GitHub\2n\EDA\Tema4\Ejercicio5\Set.h(101,13): warning C4101: 'pos': variable local sin referencia
-  (compilando archivo de origen "Ejercicio5.cpp")
-      C:\Users\jzazo\Documents\GitHub\2n\EDA\Tema4\Ejercicio5\Set.h(101,13):
-      el contexto de creación de instancias de la plantilla (el más antiguo primero) es
-          C:\Users\jzazo\Documents\GitHub\2n\EDA\Tema4\Ejercicio5\Set.h(99,10):
-          al compilar la función del miembro clase plantilla "bool Set<int>::contains(const T &) const"
-          with
-          [
-              T=int
-          ]
-              C:\Users\jzazo\Documents\GitHub\2n\EDA\Tema4\Ejercicio5\Set.h(145,13):
-              vea la primera referencia a “Set<int>::contains” en “Set<int>::operator &&”
-              C:\Users\jzazo\Documents\GitHub\2n\EDA\Tema4\Ejercicio5\Ejercicio5.cpp(30,54):
-              vea la primera referencia a “Set<int>::operator &&” en “resuelveCaso”
-  
-C:\Users\jzazo\Documents\GitHub\2n\EDA\Tema4\Ejercicio5\Set.h(100,14): warning C4101: 'found': variable local sin referencia
-  (compilando archivo de origen "Ejercicio5.cpp")
-  
-  Ejercicio5.vcxproj -> C:\Users\jzazo\Documents\GitHub\2n\EDA\Tema4\x64\Debug\Ejercicio5.exe
+  Ejercicio5.vcxproj -> C:\Users\jzazo\OneDrive\Documents\GitHub\2º\EDA\Tema4\x64\Debug\Ejercicio5.exe
