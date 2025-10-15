@@ -7,10 +7,10 @@
 #include <set>
 #include <vector>
 
-int sumaDigitosCuadrados(int n) { // O(1)
+int sumaDigitosCuadrados(int n) { // O(d) siendo d el número de dígitos de n
     int res = 0;
     while (n != 0) {
-        res += std::pow(n % 10, 2);
+        res += (n % 10) * (n % 10);
         n /= 10;
     }
     return res;
@@ -21,7 +21,9 @@ bool estaEnSet(const std::set<int>& s, int n) { // O(log(s.size()))
 
     return it != s.end();
 }
-// Complejidad: O()
+// Complejidad: O(k*max(log(k), d)) siendo k el número de iteraciones necesarias para determinar si el número es feliz o no
+// y d el número de dígitos del número n porque dentro de cada iteración (O(k)) se hace un find (O(log(k))), un insert (O(log(k)))
+// y una suma de los cuadrados de los dígitos (O(d))
 std::vector<int> esFeliz(int n) {
     std::set<int> s;
     std::vector<int> v;
