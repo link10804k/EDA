@@ -1,0 +1,20 @@
+﻿  Ejercicio6.cpp
+C:\Users\jzazo\Documents\GitHub\2n\EDA\Tema4\Ejercicio6\Set.h(69,22): warning C4244: '=': conversión de '__int64' a 'int'; posible pérdida de datos
+  (compilando archivo de origen "Ejercicio6.cpp")
+      C:\Users\jzazo\Documents\GitHub\2n\EDA\Tema4\Ejercicio6\Set.h(69,22):
+      el contexto de creación de instancias de la plantilla (el más antiguo primero) es
+          C:\Users\jzazo\Documents\GitHub\2n\EDA\Tema4\Ejercicio6\Ejercicio6.cpp(12,10):
+          Vea la referencia a la creación de una instancia de clase plantilla "Set<int>" que se está compilando
+          C:\Users\jzazo\Documents\GitHub\2n\EDA\Tema4\Ejercicio6\Set.h(53,10):
+          al compilar la función del miembro clase plantilla "void Set<int>::add(const T &)"
+          with
+          [
+              T=int
+          ]
+              C:\Users\jzazo\Documents\GitHub\2n\EDA\Tema4\Ejercicio6\Ejercicio6.cpp(17,16):
+              vea la primera referencia a “Set<int>::add” en “resolver”
+  
+C:\Users\jzazo\Documents\GitHub\2n\EDA\Tema4\Ejercicio6\Set.h(54,14): warning C4101: 'found': variable local sin referencia
+  (compilando archivo de origen "Ejercicio6.cpp")
+  
+  Ejercicio6.vcxproj -> C:\Users\jzazo\Documents\GitHub\2n\EDA\Tema4\x64\Debug\Ejercicio6.exe
