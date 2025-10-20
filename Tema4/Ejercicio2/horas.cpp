@@ -12,6 +12,16 @@ Hora::Hora(int horas, int minutos, int segundos) {
 	}
 }
 
+int Hora::GetHoras() {
+	return horas;
+}
+int Hora::GetMins() {
+	return minutos;
+}
+int Hora::GetSegs() {
+	return segundos;
+}
+
 bool operator<(Hora h1, Hora h2) {
 	if (h1.horas < h2.horas) {
 		return true;

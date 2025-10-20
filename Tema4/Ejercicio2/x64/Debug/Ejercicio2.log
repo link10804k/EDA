@@ -1,0 +1,5 @@
+﻿  Ejercicio2.cpp
+C:\Users\jzazo\Documents\GitHub\2n\EDA\Tema4\Ejercicio2\Ejercicio2.cpp(50,62): warning C4267: 'argumento': conversión de 'size_t' a 'int'; posible pérdida de datos
+  horas.cpp
+  Generando código...
+  Ejercicio2.vcxproj -> C:\Users\jzazo\Documents\GitHub\2n\EDA\Tema4\x64\Debug\Ejercicio2.exe
