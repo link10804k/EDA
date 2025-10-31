@@ -130,53 +130,6 @@ public:
       this->borra_elem(it.act);
       return next;
    }
-
-   void forward(int n, int pos, int lon, int k) {
-       int nodoIzqIndex = pos - k - 1; // El nodo que se va a quedar a la izquierda del segmento
-       int nodoDerIndex = pos - k; // El nodo que se va a quedar a la derecha del segmento   
-       int anteriorNodoIzqIndex = pos - 1; // El nodo que estaba a la izquierda del segmento
-	   int anteriorNodoDerIndex = pos + lon; // El nodo que estaba a la derecha del segmento
-	   int priNodoSegIndex = pos; // El primer nodo del segmento
-       int ultNodoSegIndex = pos + lon - 1; // El último nodo del segmento
-
-       Nodo* nodoIzq = this->fantasma;
-	   Nodo* nodoDer = this->fantasma;
-	   Nodo* anteriorNodoIzq = this->fantasma;
-	   Nodo* anteriorNodoDer = this->fantasma;
-	   Nodo* priNodoSeg = this->fantasma;
-	   Nodo* ultNodoSeg = this->fantasma;
-
-	   Nodo* act = this->fantasma->sig;
-
-       for (int i = 0; i < n; ++i) {
-           if (i == nodoIzqIndex) {
-               nodoIzq = act;
-           }
-           else if (i == nodoDerIndex) {
-               nodoDer = act;
-           }
-           else if (i == anteriorNodoIzqIndex) {
-               anteriorNodoIzq = act;
-           }
-           else if (i == anteriorNodoDerIndex) {
-               anteriorNodoDer = act;
-           }
-           else if (i == priNodoSegIndex) {
-               priNodoSeg = act;
-           }
-           else if (i == ultNodoSegIndex) {
-               ultNodoSeg = act;
-           }
-           act = act->sig;
-       }
-
-	   nodoIzq->sig = priNodoSeg;
-	   priNodoSeg->ant = nodoIzq;
-	   ultNodoSeg->sig = nodoDer;
-	   nodoDer->ant = ultNodoSeg;
-	   anteriorNodoIzq->sig = anteriorNodoDer;
-	   anteriorNodoDer->ant = anteriorNodoIzq;
-   }
 };
 
 #endif // list_eda_h
