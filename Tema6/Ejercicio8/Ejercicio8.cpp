@@ -13,13 +13,14 @@ int diametro(bintree<char> bt, int& max) {
 	else {
 		int diametroIzq = diametro(bt.left(), max);
 		int diametroDer = diametro(bt.right(), max);
+		if (diametroIzq + diametroDer + 1 > max) {
+			max = diametroIzq + diametroDer + 1;
+		}
+		if (diametroIzq >= diametroDer) {
+			return diametroIzq + 1;
+		}
+		else return diametroDer + 1;
 	}
-    if (diametro(bt.left()) >= diametro(bt.right())) {
-		return diametro(bt.left()) + 1;
-    }
-    else {
-		return diametro(bt.right(), max) + 1;
-    }
 }
 
 
