@@ -1,5 +1,5 @@
-// Nombre del alumno .....
-// Usuario del Juez ......
+// Javier Zazo Morillo
+// EDA-GDV72
 
 
 #include <iostream>
@@ -8,13 +8,17 @@
 #include "bintree_eda.h"
 
 // función que resuelve el problema
-int diametro(bintree<char> bt) {
+int diametro(bintree<char> bt, int& max) {
     if (bt.empty()) return 0;
+	else {
+		int diametroIzq = diametro(bt.left(), max);
+		int diametroDer = diametro(bt.right(), max);
+	}
     if (diametro(bt.left()) >= diametro(bt.right())) {
 		return diametro(bt.left()) + 1;
     }
     else {
-		return diametro(bt.right()) + 1;
+		return diametro(bt.right(), max) + 1;
     }
 }
 
@@ -25,10 +29,11 @@ void resuelveCaso() {
     // leer los datos de la entrada
     bintree<char> datos = leerArbol('.');
 
-    int sol = diametro(datos);
+	int max = 0
+    diametro(datos, max);
 
     // escribir sol
-    std::cout << sol << '\n';
+    std::cout << max << '\n';
 }
 
 int main() {
