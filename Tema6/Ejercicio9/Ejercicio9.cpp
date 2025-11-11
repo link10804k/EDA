@@ -1,5 +1,5 @@
-// Javier Zazo Morillo
-// EDA-GDV72
+// Nombre del alumno .....
+// Usuario del Juez ......
 
 
 #include <iostream>
@@ -7,34 +7,30 @@
 #include <fstream>
 #include "bintree_eda.h"
 
-// Complejidad: O(n) siendo n el número de nodos del árbol ya que se hacen dos llamadas recursivas de tamaño mitad cada iteración.
-int diametro(const bintree<char>& bt, int& max) {
-    if (bt.empty()) return 0;
-	else {
-		int diametroIzq = diametro(bt.left(), max);
-		int diametroDer = diametro(bt.right(), max);
-		if (diametroIzq + diametroDer + 1 > max) {
-			max = diametroIzq + diametroDer + 1;
-		}
-		if (diametroIzq >= diametroDer) {
-			return diametroIzq + 1;
-		}
-		else return diametroDer + 1;
-	}
+//using Sol = std::tuple<bool, int, int>;
+//using Sol = std::pair<bool, int>;
+
+// función que resuelve el problema
+TipoSolucion resolver(TipoDatos datos) {
+
+
 }
 
+template <class T>
+bool esHoja(const bintree<T>& bt) {
+    return (!bt.empty() && bt.left() == nullptr && bt.right() == nullptr);
+}
 
 // Resuelve un caso de prueba, leyendo de la entrada la
 // configuración, y escribiendo la respuesta
 void resuelveCaso() {
     // leer los datos de la entrada
-    bintree<char> datos = leerArbol('.');
 
-    int max = 0;
-    diametro(datos, max);
 
+    TipoSolucion sol = resolver(datos);
     // escribir sol
-    std::cout << max << '\n';
+
+
 }
 
 int main() {

@@ -7,32 +7,23 @@
 #include <fstream>
 #include "bintree_eda.h"
 
-// Complejidad: O(n) siendo n el número de nodos del árbol porque se hacen dos llamadas recursivas de tamaño mitad cada iteración (y el resto de operaciones son de complejidad constante).
-bool esDeBusqueda(bintree<int> bt, int& min, int& max) {
-    if (bt.empty()) {	
-		max = INT32_MIN;
-		min = INT32_MAX;
-        return true;
+struct Sol {
+    bool esDeBusqueda;
+    int min;
+    int max;
+};
+
+//Complejidad: O(n) siendo n el número de nodos del árbol porque se hacen dos llamadas recursivas de tamaño mitad cada iteración 
+// (y el resto de operaciones son de complejidad constante).
+Sol esDeBusqueda(const bintree<int>& bt) {
+    if (bt.empty()) {
+		return Sol{ true, -1, -1 };
     }
-	int minIzq, maxIzq, minDer, maxDer;
-    if (esDeBusqueda(bt.left(), minIzq, maxIzq) && esDeBusqueda(bt.right(), minDer, maxDer) && (bt.root() > maxIzq) && (bt.root() < minDer)) {
-        if (bt.left().empty()) {
-			min = bt.root();
-        }
-        else {
-            min = minIzq;
-        }
-        if (bt.right().empty()) {
-            max = bt.root();
-        }
-        else {
-			max = maxDer;
-        }
-		return true;
-    }
-    else {
-		return false;
-    }
+    Sol izq = esDeBusqueda(bt.left());
+    Sol der = esDeBusqueda(bt.right());
+
+    return Sol{ izq.esDeBusqueda && der.esDeBusqueda && (izq.max < bt.root() || izq.max == -1) && (der.min > bt.root() || der.min == -1),
+        (izq.min != -1 ? izq.min : bt.root()), (der.max != -1 ? der.max : bt.root()) };
 }
 
 // Resuelve un caso de prueba, leyendo de la entrada la
@@ -41,12 +32,10 @@ void resuelveCaso() {
     // leer los datos de la entrada
 	bintree<int> datos = leerArbol(-1);
 
-    int min = 0; 
-    int max = 0;
-    bool sol = esDeBusqueda(datos, min, max);
+    Sol sol = esDeBusqueda(datos);
 
     // escribir sol
-    std::cout << (sol ? "SI" : "NO") << std::endl;
+    std::cout << (sol.esDeBusqueda ? "SI" : "NO") << std::endl;
 }
 
 int main() {
