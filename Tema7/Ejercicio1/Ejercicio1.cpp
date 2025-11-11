@@ -1,3 +1,6 @@
+// Javier Zazo Morillo
+// EDA-GDV72
+
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -5,7 +8,7 @@
 #include <list>
 using namespace std;
 
-using TablaRefs = ...
+using TablaRefs = std::map<string, std::list<int>>;
 
 void referencias(int numLineas, TablaRefs& refs) {
     string palabra;
@@ -14,9 +17,18 @@ void referencias(int numLineas, TablaRefs& refs) {
         cin.get(c);
         while (c != '\n') {
             cin.unget(); // Se vuelve a dejar c en cin (por si era la 1ª letra de la linea)
-            cin >> palabra;
-            ...
-                cin.get(c);
+            cin >> palabra;      
+
+            if (palabra.size() > 2) {
+				for (auto& ch : palabra) { // Transformar a minúsculas
+					ch = tolower(ch);
+                }
+                if (refs[palabra].empty() || refs[palabra].back() != numLinea) {
+                    refs[palabra].push_back(numLinea);
+                }
+            }      
+
+            cin.get(c);
         }
     }
 }
@@ -37,8 +49,17 @@ bool resuelveCaso() {
     referencias(n, refs);
 
     // escribir sol
-    ...
-        cout << "---\n";
+    for (auto [key, value] : refs)
+    {
+        std::cout << key;
+        for (auto numLinea : value) {
+            std::cout << " " << numLinea;
+        }
+		std::cout << "\n";
+    }
+
+
+    cout << "---\n";
     return true;
 
 }
