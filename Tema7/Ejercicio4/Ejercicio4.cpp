@@ -5,11 +5,25 @@
 #include <iostream>
 #include <iomanip>
 #include <fstream>
+#include <map>
 
 
 // función que resuelve el problema
-TipoSolucion resolver(TipoDatos datos) {
+int resolver(int nCapitulos) {
+	std::map<int, int> diccionario;
 
+    int capitulo;
+    for (int i = 0; i < nCapitulos; ++i) {
+		std::cin >> capitulo;
+        if (diccionario.at(capitulo) != 0) {
+            LimpiarSeccion(diccionario, capitulo);
+        }
+        else {
+            diccionario.insert(capitulo, i + 1);
+        }
+    }
+}
+void LimpiarSeccion(std::map<int, int>& diccionario, int capitulo) {
 
 }
 
@@ -17,12 +31,13 @@ TipoSolucion resolver(TipoDatos datos) {
 // configuración, y escribiendo la respuesta
 void resuelveCaso() {
     // leer los datos de la entrada
+    int nCapitulos;
+    std::cin >> nCapitulos;
 
+    int sol = resolver(nCapitulos);
 
-    TipoSolucion sol = resolver(datos);
     // escribir sol
-
-
+	std::cout << sol << '\n';
 }
 
 int main() {
