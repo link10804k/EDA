@@ -1,3 +1,5 @@
+// Javier Zazo Morillo
+// EDA-GDV72
 
 #include <iostream>
 #include <string>
@@ -5,39 +7,72 @@
 #include <fstream>
 using namespace std;
 
+#include <unordered_map>
 
 using DNI = string;
+using Puntos = int;
 
 class carnet_puntos {
 private:
-
-
+    std::unordered_map<DNI, Puntos> conductores;
+    std::unordered_map<Puntos, int> conductoresPorPuntos;
 
 public:
     carnet_puntos() {}
 
-    // Complejidad:
+    // Complejidad: O(1) porque insert() es constante en promedio
     void nuevo(DNI const& conductor) {
-        ...
-            throw std::domain_error("Conductor duplicado");
+         if (!conductores.insert({conductor, 15}).second) 
+             throw std::domain_error("Conductor duplicado");
+         else {
+             ++conductoresPorPuntos[15];
+         }
     }
 
-    // Complejidad:
+    // Complejidad: O(1) porque find() es constante en promedio
     void quitar(DNI const& conductor, int puntos) {
-        ...
+        std::unordered_map<DNI, Puntos>::iterator it = conductores.find(conductor);
+
+        if (it == conductores.end()) {
             throw std::domain_error("Conductor inexistente");
+        }
+        else {
+            --conductoresPorPuntos[(*it).second];
+
+            (*it).second -= puntos;
+            if ((*it).second < 0) (*it).second = 0;
+
+            ++conductoresPorPuntos[(*it).second];
+        }
     }
 
-    // Complejidad:
+    // Complejidad: O(1) porque find() es constante en promedio
     int consultar(DNI const& conductor) const {
-        ...
+        std::unordered_map<DNI, Puntos>::const_iterator it = conductores.find(conductor);
+
+        if (it == conductores.end()) {
             throw std::domain_error("Conductor inexistente");
+        }
+        else {
+            return (*it).second;
+        }
     }
 
-    // Complejidad:
+    // Complejidad: O(1) porque at() es constante en promedio
     int cuantos_con_puntos(int puntos) const {
-        ...
+        if (puntos < 0 || puntos > 15) {
             throw std::domain_error("Puntos no validos");
+        }
+        else {
+            std::unordered_map<Puntos, int>::const_iterator it = conductoresPorPuntos.find(puntos);
+
+            if (it == conductoresPorPuntos.end()) {
+                return 0;
+            }
+            else {
+                return (*it).second;
+            }
+        }
     }
 };
 

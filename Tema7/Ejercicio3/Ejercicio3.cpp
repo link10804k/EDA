@@ -6,25 +6,24 @@
 #include <cctype>
 using namespace std;
 
-#include <map>
-#include <set>
+#include <unordered_map>
+#include <vector>
+#include <algorithm>
 
-struct valueLess {
-    bool operator()(const ) {
+using Deporte = string;
+using Alumno = string;
 
-    }
-};
-
-// Complejidad: O()
-void resolver(string const& primerDeporte, std::map<string, int>& demandaDeportes) { // Quedaría mejor juntar los dos maps y hacer un map<string, map<string, int>>??
-    std::map<string, string> alumnos; // Alumno - Deporte
+// Complejidad: O(D*I + D + D*log(D)) siendo D el número de deportes e I el número máximo de inscripciones a un deporte
+// porque se hacen D*I iteraciones para rellenar el diccionario, D iteraciones para volcarlo sobre un vector y D*log(D) iteraciones para ordenarlo.
+void resolver(string const& primerDeporte, std::unordered_map<Deporte, int>& demandaDeportes, std::vector<Deporte>& deportesOrdenados) {
+    std::unordered_map<Alumno, Deporte> alumnos;
 
     string deporte, alumno;
     deporte = primerDeporte;
-    while (deporte != "_FIN_") {
+    while (deporte != "_FIN_") { // O(D*I) siendo D el número de deportes e I el número máximo de inscripciones a un deporte
         demandaDeportes[deporte] = 0;
         cin >> alumno;
-        while (!isupper(alumno[0]) && alumno != "_FIN_") {
+        while (!isupper(alumno[0]) && alumno != "_FIN_") { // O(I) siendo I el número máximo de inscripciones a un deporte
             if (!alumnos.count(alumno)) { // Si no ha salido antes el alumno lo inserta y añade 1 al contador del deporte
                 alumnos[alumno] = deporte;
                 ++demandaDeportes[deporte];
@@ -39,6 +38,18 @@ void resolver(string const& primerDeporte, std::map<string, int>& demandaDeporte
         }
         deporte = alumno;
     }
+
+    for (auto [nombreDeporte, nInscripciones] : demandaDeportes) { // O(D) siendo D el número de deportes
+        deportesOrdenados.push_back(nombreDeporte);
+    }
+
+    std::sort(deportesOrdenados.begin(), deportesOrdenados.end(), [&](const Deporte& deporte1, const Deporte& deporte2) { // O(D*log(D)) siendo D el número de deportes
+        int nInscripciones1 = demandaDeportes[deporte1];
+        int nInscripciones2 = demandaDeportes[deporte2];
+
+        if (nInscripciones1 != nInscripciones2) return nInscripciones1 > nInscripciones2;
+        return deporte1 < deporte2;
+    });
 }
 
 // Resuelve un caso de prueba, leyendo de la entrada la
@@ -49,13 +60,14 @@ bool resuelveCaso() {
     cin >> primerDeporte;
     if (!cin) return false;
 
-    std::map<string, int> sol; // Deporte - nAlumnos
-    resolver(primerDeporte, sol);
+    std::unordered_map<Deporte, int> demandaDeportes;
+    std::vector<Deporte> deportesOrdenados;
+    resolver(primerDeporte, demandaDeportes, deportesOrdenados);
     
     
     // Salida
-    for (auto [deporte, nAlumnos] : sol) {
-        std::cout << deporte << " " << nAlumnos << "\n";
+    for (Deporte deporte : deportesOrdenados) {
+        std::cout << deporte << " " << demandaDeportes[deporte] << "\n";
     }
     cout << "---\n";
     return true;
