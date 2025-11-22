@@ -15,8 +15,7 @@ using Puntos = int;
 class carnet_puntos {
 private:
     std::unordered_map<DNI, Puntos> conductores;
-    std::unordered_map<Puntos, int> conductoresPorPuntos;
-
+    int conductoresPorPuntos[16] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 public:
     carnet_puntos() {}
 
@@ -58,20 +57,13 @@ public:
         }
     }
 
-    // Complejidad: O(1) porque at() es constante en promedio
+    // Complejidad: O(1) porque el operador [] en una array es constante
     int cuantos_con_puntos(int puntos) const {
         if (puntos < 0 || puntos > 15) {
             throw std::domain_error("Puntos no validos");
         }
         else {
-            std::unordered_map<Puntos, int>::const_iterator it = conductoresPorPuntos.find(puntos);
-
-            if (it == conductoresPorPuntos.end()) {
-                return 0;
-            }
-            else {
-                return (*it).second;
-            }
+            return conductoresPorPuntos[puntos];
         }
     }
 };
