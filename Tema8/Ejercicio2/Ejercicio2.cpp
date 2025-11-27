@@ -6,6 +6,7 @@
 #include <string>
 #include <stdexcept>
 #include <cassert>
+#include <fstream>
 
 #include "consultorio.cpp"
 
@@ -31,7 +32,7 @@ bool resuelve() {
             }
             else if (inst == "pideConsulta") {
                 cin >> pac >> med >> d >> h >> c >> m;
-                con.pideConsulta(pac, med, fecha(d, h, m));
+                con.pideConsulta(pac, med, { d, h, m });
             }
             else if (inst == "siguientePaciente") {
                 cin >> med;
@@ -45,7 +46,7 @@ bool resuelve() {
             }
             else if (inst == "listaPacientes") {
                 cin >> med >> d;
-                auto vec = con.listaPacientes(med, fecha(d, 0, 0));
+                auto vec = con.listaPacientes(med, { d, 0, 0 });
                 cout << "Doctor " << med << " dia " << d << '\n';
                 for (auto p : vec) {
                     cout << p.second << ' ' << p.first << '\n';
@@ -62,7 +63,22 @@ bool resuelve() {
 }
 
 int main() {
+    // ajuste para que cin extraiga directamente de un fichero
+//#define DOMJUDGE
+#ifndef DOMJUDGE
+   // _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+    std::ifstream in("datos.txt");
+    auto cinbuf = std::cin.rdbuf(in.rdbuf());
+#endif
+
     while (resuelve());
 
+    // restablecimiento de cin
+#ifndef DOMJUDGE
+    std::cin.rdbuf(cinbuf);
+    //system("pause");
+#endif
     return 0;
 }
+
+
