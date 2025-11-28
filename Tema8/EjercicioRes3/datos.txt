@@ -1,0 +1,25 @@
+poner_libro a 2
+poner_libro b 5
+poner_libro c 3
+poner_libro d 10
+abierto
+abrir c
+abrir b
+abrir a
+avanzar_pag
+avanzar_pag
+pag_libro a
+pag_libro d
+abrir b
+recientes 5
+elim_libro b
+recientes 2
+FIN
+poner_libro lib 1
+abrir a
+avanzar_pag
+abierto
+pag_libro a
+elim_libro a
+recientes 5
+FIN
