@@ -1,3 +1,3 @@
 ﻿  Ejercicio5.cpp
-C:\Users\jzazo\OneDrive\Documents\GitHub\2º\EDA\Tema8\Ejercicio5\Ejercicio5.cpp(83,53): warning C4267: 'return': conversión de 'size_t' a 'int'; posible pérdida de datos
-  Ejercicio5.vcxproj -> C:\Users\jzazo\OneDrive\Documents\GitHub\2º\EDA\Tema8\x64\Debug\Ejercicio5.exe
+C:\Users\jzazo\Documents\GitHub\2n\EDA\Tema8\Ejercicio5\Ejercicio5.cpp(95,53): warning C4267: 'return': conversión de 'size_t' a 'int'; posible pérdida de datos
+  Ejercicio5.vcxproj -> C:\Users\jzazo\Documents\GitHub\2n\EDA\Tema8\x64\Debug\Ejercicio5.exe

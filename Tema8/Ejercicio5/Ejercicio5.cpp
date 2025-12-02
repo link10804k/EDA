@@ -12,65 +12,78 @@ using namespace std;
 
 using DNI = string;
 using Puntos = int;
+using PosEnLista = std::list<DNI>::iterator;
+
+struct InfoDNI {
+    Puntos puntos;
+    PosEnLista posEnLista;
+};
 
 class carnet_puntos {
 private:
-    std::unordered_map<DNI, Puntos> conductores;
+    std::unordered_map<DNI, InfoDNI> conductores;
     std::list<DNI> conductoresPorPuntos[16];
 public:
     carnet_puntos() {}
 
     // Complejidad: O(1) porque insert() es constante en promedio
     void nuevo(DNI const& conductor) {
-        if (!conductores.insert({ conductor, 15 }).second)
+        InfoDNI info = { 15, conductoresPorPuntos->end() }; // O(1)
+        auto insertInfo = conductores.insert({ conductor, info }); // O(1)
+        if (!insertInfo.second) {
             throw std::domain_error("Conductor duplicado");
+        }
         else {
-            conductoresPorPuntos[15].push_front(conductor);
+            conductoresPorPuntos[15].push_front(conductor); // O(1)
+            (*insertInfo.first).second.posEnLista = conductoresPorPuntos[15].begin(); // O(1)
         }
     }
 
-    // Complejidad: O(1) porque find() es constante en promedio
-    void quitar(DNI const& conductor, int puntos) {
-        std::unordered_map<DNI, Puntos>::iterator it = conductores.find(conductor);
+    // Complejidad: O(1) O(1) porque find() y erase() son constantes (find en promedio)
+    void quitar(DNI const& conductor, int puntos) { // ERASE MAL
+        std::unordered_map<DNI, InfoDNI>::iterator it = conductores.find(conductor); // O(1)
 
-        if (it == conductores.end()) {
+        if (it == conductores.end()) { // O(1)
             throw std::domain_error("Conductor inexistente");
         }
         else {
-            conductoresPorPuntos[(*it).second].remove(conductor); // O(n) :(
+            conductoresPorPuntos[(*it).second.puntos].erase((*it).second.posEnLista); // O(1) :)
 
-            (*it).second -= puntos;
-            if ((*it).second < 0) (*it).second = 0;
+            (*it).second.puntos -= puntos;
+            if ((*it).second.puntos < 0) (*it).second.puntos = 0;
 
-            conductoresPorPuntos[(*it).second].push_front(conductor);
+            conductoresPorPuntos[(*it).second.puntos].push_front(conductor); // O(1)
+            (*it).second.posEnLista = conductoresPorPuntos[(*it).second.puntos].begin(); // O(1)
         }
     }
 
+    // Complejidad: O(1) porque find() y erase() son constantes (find en promedio)
     void recuperar(DNI const& conductor, int puntos) {
-        std::unordered_map<DNI, Puntos>::iterator it = conductores.find(conductor);
+        std::unordered_map<DNI, InfoDNI>::iterator it = conductores.find(conductor); // O(1)
 
-        if (it == conductores.end()) {
+        if (it == conductores.end()) { // O(1)
             throw std::domain_error("Conductor inexistente");
         }
         else {
-            conductoresPorPuntos[(*it).second].remove(conductor); // O(n) :(
+            conductoresPorPuntos[(*it).second.puntos].erase((*it).second.posEnLista); // O(1) :)
 
-            (*it).second += puntos;
-            if ((*it).second > 15) (*it).second = 15;
+            (*it).second.puntos += puntos;
+            if ((*it).second.puntos > 15) (*it).second.puntos = 15;
 
-            conductoresPorPuntos[(*it).second].push_front(conductor);
+            conductoresPorPuntos[(*it).second.puntos].push_front(conductor); // O(1)
+            (*it).second.posEnLista = conductoresPorPuntos[(*it).second.puntos].begin(); // O(1)
         }
     }
 
     // Complejidad: O(1) porque find() es constante en promedio
     int consultar(DNI const& conductor) const {
-        std::unordered_map<DNI, Puntos>::const_iterator it = conductores.find(conductor);
+        std::unordered_map<DNI, InfoDNI>::const_iterator it = conductores.find(conductor); // O(1)
 
-        if (it == conductores.end()) {
+        if (it == conductores.end()) { // O(1)
             throw std::domain_error("Conductor inexistente");
         }
         else {
-            return (*it).second;
+            return (*it).second.puntos;
         }
     }
 
@@ -83,7 +96,7 @@ public:
             return conductoresPorPuntos[puntos].size();
         }
     }
-
+    // Complejidad: O(1) porque el operador [] en una array es constante
     std::list<DNI> lista_por_puntos(int puntos) const {
         if (puntos < 0 || puntos > 15) {
             throw std::domain_error("Puntos no validos");
