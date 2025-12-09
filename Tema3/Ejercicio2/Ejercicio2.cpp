@@ -10,17 +10,23 @@
 #include <string>
 
 // función que resuelve el problema
-void resolver(std::vector<char>& soluc, int k, int& n, int& m) {
+void resolver(std::vector<char>& soluc, int k, int& n, int& m, std::vector<bool>& usadas) {
     for (char c = 'a'; c < 'a' + m; ++c) {
         soluc[k] = c;
 
-        if (k == n - 1) {
-            for (char sol : soluc) {
-                std::cout << sol;
+        if (!usadas[c - 'a']) { // ¿Es válida?
+            if (k == n - 1) { // ¿Es solución?
+                for (char sol : soluc) {
+                    std::cout << sol;
+                }
+                std::cout << "\n";
             }
-            std::cout << "\n";
-        }
-        else resolver(soluc, k + 1, n, m);
+            else {
+                usadas[c - 'a'] = true;
+                resolver(soluc, k + 1, n, m, usadas);
+                usadas[c - 'a'] = false;
+            }
+        } 
     }
 }
 
@@ -30,12 +36,13 @@ bool resuelveCaso() {
     // leer los datos de la entrada
     int n, m;
     std::cin >> m >> n;
-    
+
     if (!std::cin)
         return false;
 
     std::vector<char> soluc(n);
-    resolver(soluc, 0, n, m);
+    std::vector<bool> usadas(m);
+    resolver(soluc, 0, n, m, usadas);
 
     std::cout << "\n";
 

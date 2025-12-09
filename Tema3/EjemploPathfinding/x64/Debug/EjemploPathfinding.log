@@ -1,0 +1,3 @@
+﻿  EjemploPathfinding.cpp
+C:\Users\jzazo\Documents\GitHub\2n\EDA\Tema3\EjemploPathfinding\EjemploPathfinding.cpp(22,13): error C3861: 'esValida': no se encontró el identificador
+C:\Users\jzazo\Documents\GitHub\2n\EDA\Tema3\EjemploPathfinding\EjemploPathfinding.cpp(23,17): error C3861: 'esSolucion': no se encontró el identificador
