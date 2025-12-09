@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36705.20 d17.14
+VisualStudioVersion = 17.14.36705.20
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EjemploPathfinding", "EjemploPathfinding\EjemploPathfinding.vcxproj", "{85647FEB-5D04-4D94-8B86-C2EEEF443F5F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Ejercicio1", "Ejercicio1\Ejercicio1.vcxproj", "{F3209CD4-3CEE-450B-95E8-47AEDD4ABEBE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,14 @@ Global
 		{85647FEB-5D04-4D94-8B86-C2EEEF443F5F}.Release|x64.Build.0 = Release|x64
 		{85647FEB-5D04-4D94-8B86-C2EEEF443F5F}.Release|x86.ActiveCfg = Release|Win32
 		{85647FEB-5D04-4D94-8B86-C2EEEF443F5F}.Release|x86.Build.0 = Release|Win32
+		{F3209CD4-3CEE-450B-95E8-47AEDD4ABEBE}.Debug|x64.ActiveCfg = Debug|x64
+		{F3209CD4-3CEE-450B-95E8-47AEDD4ABEBE}.Debug|x64.Build.0 = Debug|x64
+		{F3209CD4-3CEE-450B-95E8-47AEDD4ABEBE}.Debug|x86.ActiveCfg = Debug|Win32
+		{F3209CD4-3CEE-450B-95E8-47AEDD4ABEBE}.Debug|x86.Build.0 = Debug|Win32
+		{F3209CD4-3CEE-450B-95E8-47AEDD4ABEBE}.Release|x64.ActiveCfg = Release|x64
+		{F3209CD4-3CEE-450B-95E8-47AEDD4ABEBE}.Release|x64.Build.0 = Release|x64
+		{F3209CD4-3CEE-450B-95E8-47AEDD4ABEBE}.Release|x86.ActiveCfg = Release|Win32
+		{F3209CD4-3CEE-450B-95E8-47AEDD4ABEBE}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
