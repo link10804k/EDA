@@ -10,17 +10,13 @@
 
 using Tablero = std::vector<std::vector<bool>>;
 
-struct Pos {
-    int x, y;
-};
-
-bool esValida(const std::vector<int>& soluc, const Pos& pos, const int& k) {
-    int i = 0;
+bool esValida(const std::vector<int>& soluc, const int& k, const std::vector<bool>& columnasOcupadas, const int& columnaActual) {
     bool valido = true;
+    if (columnasOcupadas[columnaActual])
+        return false;
+    int i = 0;
     while (i < k && valido) {
-        if (pos.y == soluc[i] ||
-            pos.y == soluc[i] - pos.y + i ||
-            pos.y == soluc[i] + pos.y - i)
+        if (std::abs(soluc[k] - soluc[i]) == k - i)
             valido = false;
         ++i;
     }
@@ -30,18 +26,22 @@ bool esSolucion(const int& k, const int& n) {
     return k == n - 1;
 }
 
-// función que resuelve el problema
-void resolver(std::vector<int>& soluc, int k, int& n, int& m, int& nSol) {
-    for (Pos pos = { k, 0 }; pos.y < m; ++pos.y) {
-        if (esValida(soluc, pos, k))
-            if (esSolucion(k, n))
+// Complejidad: O(n^n)
+void resolver(std::vector<int>& soluc, int k, int& n, int& m, int& nSol, std::vector<bool>& columnasOcupadas, std::vector<bool>& diagonalesOcupadas) {
+    for (int i = 0; i < m; ++i) {
+        soluc[k] = i;
+        if (esValida(soluc, k, columnasOcupadas, i)) {
+            if (esSolucion(k, n)) {
                 ++nSol;
-            else {
-                soluc[k] = pos.y;
-                resolver(soluc, k + 1, n, m, nSol);
             }
+            else {     
+                columnasOcupadas[i] = true;
+                diagonalesOcupadas
+                resolver(soluc, k + 1, n, m, nSol, columnasOcupadas);
+                columnasOcupadas[i] = false;
+            }
+        }
     }
-
 }
 
 // Resuelve un caso de prueba, leyendo de la entrada la
@@ -52,8 +52,9 @@ void resuelveCaso() {
     std::cin >> n;
 
     std::vector<int> soluc(n); // Columnas
+    std::vector<bool> columnasOcupadas(n);
     int nSol = 0;
-    resolver(soluc, 0, n, n, nSol);
+    resolver(soluc, 0, n, n, nSol, columnasOcupadas);
     // escribir sol
 
     std::cout << nSol << "\n";
