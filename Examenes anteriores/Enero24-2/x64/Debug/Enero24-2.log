@@ -1,27 +1,2 @@
 ﻿  Enero24-2.cpp
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(274,16): warning C4267: 'inicializando': conversión de 'size_t' a '_Ty1'; posible pérdida de datos
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(274,16): warning C4267:         with
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(274,16): warning C4267:         [
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(274,16): warning C4267:             _Ty1=int
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(274,16): warning C4267:         ]
-  (compilando archivo de origen "Enero24-2.cpp")
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(274,16):
-      el contexto de creación de instancias de la plantilla (el más antiguo primero) es
-          C:\Users\jzazo\OneDrive\Documents\GitHub\2º\EDA\Examenes anteriores\Enero24-2\Enero24-2.cpp(24,14):
-          Vea la referencia a la creación de una instancia de la función plantilla "std::pair<int,int>::pair<unsigned __int64,unsigned __int64,0>(_Other1 &&,_Other2 &&) noexcept" que se está compilando
-          with
-          [
-              _Other1=unsigned __int64,
-              _Other2=unsigned __int64
-          ]
-              C:\Users\jzazo\OneDrive\Documents\GitHub\2º\EDA\Examenes anteriores\Enero24-2\Enero24-2.cpp(24,14):
-              vea la primera referencia a “std::pair<int,int>::pair” en “resolver”
-  
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(274,54): warning C4267: 'inicializando': conversión de 'size_t' a '_Ty2'; posible pérdida de datos
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(274,54): warning C4267:         with
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(274,54): warning C4267:         [
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(274,54): warning C4267:             _Ty2=int
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(274,54): warning C4267:         ]
-  (compilando archivo de origen "Enero24-2.cpp")
-  
   Enero24-2.vcxproj -> C:\Users\jzazo\OneDrive\Documents\GitHub\2º\EDA\Examenes anteriores\x64\Debug\Enero24-2.exe

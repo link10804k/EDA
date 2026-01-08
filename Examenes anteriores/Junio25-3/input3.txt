@@ -1,0 +1,24 @@
+5
+5 2
+Bellingham 19
+Vinicius 21
+Mbappe 27
+Kane 25
+Haaland 30
+3 2
+Rodri 5
+DeBruyne 8
+Foden 11
+2 4
+Kvaratskhelia 12
+Osimhen 16
+3 1
+Gundogan 7
+Pedri 4
+Yamal 6
+5 3
+Alvarez 13
+Modric 3
+Ostigard 1
+Diaz 10
+Valverde 6

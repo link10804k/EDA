@@ -1,0 +1,4 @@
+﻿  Enero25-3.cpp
+C:\Users\jzazo\OneDrive\Documents\GitHub\2º\EDA\Examenes anteriores\Enero25-3\Enero25-3.cpp(76,42): warning C4267: 'return': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\jzazo\OneDrive\Documents\GitHub\2º\EDA\Examenes anteriores\Enero25-3\Enero25-3.cpp(107,46): warning C4267: 'return': conversión de 'size_t' a 'int'; posible pérdida de datos
+  Enero25-3.vcxproj -> C:\Users\jzazo\OneDrive\Documents\GitHub\2º\EDA\Examenes anteriores\x64\Debug\Enero25-3.exe
