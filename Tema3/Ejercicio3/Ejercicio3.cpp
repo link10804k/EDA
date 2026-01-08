@@ -36,7 +36,7 @@ void resolver(std::vector<int>& soluc, int k, int& n, int& m, int& nSol, std::ve
             }
             else {     
                 columnasOcupadas[i] = true;
-                diagonalesOcupadas
+                //diagonalesOcupadas
                 resolver(soluc, k + 1, n, m, nSol, columnasOcupadas);
                 columnasOcupadas[i] = false;
             }
